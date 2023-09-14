@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scramble Word</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+	<h2><span class="scramble">Scramble</span> Words</h2>
+	<div class="content">
+		<div class="time">Time Left: <p>15s</p></div>
+		<div class="status">
+			<p class="correct">Correct : <span class="correctScore"></span></p>
+			<p class="wrong">Wrong : <span class="wrongScore"></span></p>
+		</div>
+		<div class="main">
+		<p class="word"></p>
+		<div class="details">
+			<p>Hint: <span class="hint"></span></p>
+		</div>
+		<div class="below">
+		<input type="text" name="text" id="text" placeholder="Enter a text...">
+		<div class="btn">
+			<button class="giveup">Give Up</button>
+			<button class="submit">Submit</button>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="scrambleWords.js" defer></script>
+<script type="text/javascript" src="script.js" defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
