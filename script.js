@@ -16,8 +16,16 @@ time = setInterval(() =>{
 	return timeText.innerText =maxTime + "s";
 	}
 	if (maxTime == 0) {
+				Swal.fire({
+  position: 'center',
+  icon: 'error',
+  title: 'Time up dear!',
+  showConfirmButton: false,
+  timer: 1000
+})
 			j=j+1;
 	wrongScore.innerText=j;
+
 	}
 clearInterval(time);
 initGame();
@@ -42,7 +50,13 @@ const initGame = () =>{
 }
 
 giveup.addEventListener("click",()=>{
-
+		Swal.fire({
+  position: 'center',
+  icon: 'info',
+  title: 'Try next one!',
+  showConfirmButton: false,
+  timer: 1000
+})
 	j=j+1;
 	wrongScore.innerText=j;
 
@@ -52,10 +66,24 @@ let i = 0; let j = 0;
 submit.addEventListener("click",()=>{
 let userWord = input.value.toLocaleLowerCase();
 if (userWord==correctWord) {
+	Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'You freaking genius!',
+  showConfirmButton: false,
+  timer: 1000
+})
 	i=i+1;
 	correctScore.innerText=i;
 }
 else{
+		Swal.fire({
+  position: 'center',
+  icon: 'error',
+  title: 'Wrong Answer',
+  showConfirmButton: false,
+  timer: 1000
+})
 	j=j+1;
 	wrongScore.innerText=j;
 }
